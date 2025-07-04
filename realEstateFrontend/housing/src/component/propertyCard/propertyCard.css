@@ -9,7 +9,6 @@
 }
 
 .text-div p {
-    font-size: 1.5rem;
     font-weight: 600;
     margin-bottom: 1.2rem;
 }
@@ -17,6 +16,12 @@
 .text-div span {
     color: #0073e6;
     font-weight: bold;
+    font-size: 1.4rem;
+}
+
+.text-div-paragraph {
+    padding-top: 0.2rem;
+    font-size: 1rem;
 }
 
 /* Horizontal scroll layout */
@@ -123,6 +128,18 @@
 }
 
 @media screen and (max-width: 480px) {
+    .text-div p {
+        font-size: 1rem;
+    }
+
+    .text-div span {
+        font-size: 1.4rem;
+    }
+
+    .text-div-paragraph {
+        padding-top: 0.2rem;
+    }
+
     .property-card {
         width: 200px;
         min-width: 200px;

@@ -305,14 +305,15 @@
     }
 
     .profile {
-        height: 1.5rem;
-        width: 1.5rem;
-        font-size: 1rem;
+        height: 1.45rem;
+        width: 1.45rem;
+        font-size: 0.95rem;
     }
 
     .mobile-menu-btn {
-        font-size: 1.5rem;
+        font-size: 1.4rem;
         margin-right: 0.8rem;
+        line-height: 0.5;
     }
     .login-btn{
         padding: 0.2rem 2rem;

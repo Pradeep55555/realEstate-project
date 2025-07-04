@@ -199,7 +199,11 @@
 
 @media screen and (max-width: 480px) {
     .content span {
-        font-size: 1.4rem;
+        font-size: 1rem;
+    }
+    .content-paragraph2{
+        padding-top: 0.3rem;
+        font-size: 0.85rem;
     }
 
     .explore1 {
@@ -228,9 +232,14 @@
 
 
     .explore2-text span {
-        font-size: 1.6rem;
+        font-size: 1.5rem;
     }
-
+     .explore2-left span{
+        font-size: 1rem;
+     }
+     .explore2-left p{
+        font-size: 0.85rem;
+     }
     .explore2-right {
         width: 100%;
     }
@@ -242,7 +251,7 @@
     .tab {
         width: 100%;
         display: flex;
-        gap: 0.4rem;
+        gap: 0.8rem;
         margin-bottom: 20px;
     
     }
@@ -250,7 +259,7 @@
     .tab span {
         padding: 3px 5px;
         border-radius: 5px;
-        font-size: 0.9rem;
+        font-size: 0.8rem;
     }
 
     .article-card {

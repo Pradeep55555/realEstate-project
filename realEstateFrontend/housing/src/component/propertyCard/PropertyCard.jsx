@@ -102,8 +102,7 @@ function PropertyCard() {
                 <div className="text-div">
                     <p>
                         <span>Insights & Tools </span>
-                        <br />
-                        Go from browsing to buying
+                        <p className='text-div-paragraph'>Go from browsing to buying</p> 
                     </p>
                 </div>
 
