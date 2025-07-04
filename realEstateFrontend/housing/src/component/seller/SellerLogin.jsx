@@ -125,7 +125,8 @@ function SellerLogin() {
             const data = await response.json();
 
             if (data.Status === "Success") {
-                window.open(`http://localhost:5175/dashboard`, "_blank");
+                // window.open(`http://localhost:5175/dashboard`, "_blank");
+                window.open(`https://real-estate-seller-page.vercel.app/`, "_blank");
             } else {
                 swal(data.Error, {
                     icon: "warning",

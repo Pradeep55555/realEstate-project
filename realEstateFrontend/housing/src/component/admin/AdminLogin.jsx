@@ -23,7 +23,8 @@ const AdminLogin = () => {
       password === 'Pradeep@123'
     ) {
       Swal.fire('Success!', 'Login Successful', 'success').then(() => {
-        window.open(`http://localhost:5176`, "_blank");
+        // window.open(`http://localhost:5176`, "_blank");
+        window.open(`https://real-estate-admin-page.vercel.app/`, "_blank");
       });
     } else {
       Swal.fire('Error', 'Invalid email or password', 'error');
