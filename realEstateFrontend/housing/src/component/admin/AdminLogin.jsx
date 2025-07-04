@@ -20,7 +20,7 @@ const AdminLogin = () => {
     e.preventDefault();
     if (
       email === 'pradeepdhakad095@gmail.com' &&
-      password === 'Pradeep@123'
+      password === '12345'
     ) {
       Swal.fire('Success!', 'Login Successful', 'success').then(() => {
         // window.open(`http://localhost:5176`, "_blank");
