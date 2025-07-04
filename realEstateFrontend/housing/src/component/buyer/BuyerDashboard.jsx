@@ -23,6 +23,8 @@ function BuyerDashboard() {
   const [savePropertyModalOpen, setSavePropertyModalOpen] = useState(false);
   const [interestPropertyModalOpen, setInterestPropertyModalOpen] = useState(false);
 
+  const VITE_API_URL= 'https://realestate-project-1-ayx1.onrender.com'
+
 
   // const { setBuyerInfo } = useAuth();
   const navigate = useNavigate();
@@ -51,7 +53,8 @@ function BuyerDashboard() {
     // 1. Fetch Buyer Details
     const fetchBuyer = async () => {
       try {
-        const response = await fetch(`http://localhost:4000/api/buyer/${buyerMobile}`);
+        // const response = await fetch(`http://localhost:4000/api/buyer/${buyerMobile}`);
+        const response = await fetch(`${VITE_API_URL}/api/buyer/${buyerMobile}`);
         if (!response.ok) {
           console.warn("Buyer route not found or failed:", response.status);
           return;
@@ -66,7 +69,8 @@ function BuyerDashboard() {
     // 2. Fetch Buyer Interest Properties (with fallback)
     const fetchBuyerInterest = async () => {
       try {
-        const response = await fetch(`http://localhost:4000/api/buyer/interest/${buyerMobile}`);
+        // const response = await fetch(`http://localhost:4000/api/buyer/interest/${buyerMobile}`);
+        const response = await fetch(`${VITE_API_URL}/api/buyer/interest/${buyerMobile}`);
         if (!response.ok) {
           console.warn("Interest route not found or failed:", response.status);
           setBuyerInterest([]); // fallback empty
@@ -84,7 +88,8 @@ function BuyerDashboard() {
     // 3. Fetch Saved Properties (with fallback)
     const fetchSavedProperty = async () => {
       try {
-        const response = await fetch(`http://localhost:4000/api/buyer/save-property/${buyerMobile}`);
+        // const response = await fetch(`http://localhost:4000/api/buyer/save-property/${buyerMobile}`);
+        const response = await fetch(`${VITE_API_URL}/api/buyer/save-property/${buyerMobile}`);
         if (!response.ok) {
           console.warn("Saved property route not found or failed:", response.status);
           setSaveProperty([]); // fallback empty

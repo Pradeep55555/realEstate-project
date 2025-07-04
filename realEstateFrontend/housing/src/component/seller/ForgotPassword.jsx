@@ -10,13 +10,16 @@ function ForgotPassword() {
     const [confirmPassword, setConfirmPassword] = useState('');
     const navigate = useNavigate();
 
+      const VITE_API_URL= 'https://realestate-project-1-ayx1.onrender.com'
+
     const sendOtp = async () => {
         if (!email) {
             return swal("Please enter your registered email", { icon: "warning" });
         }
 
         try {
-            const res = await fetch('http://localhost:4000/seller/send-otp', {
+            // const res = await fetch('http://localhost:4000/seller/send-otp', {
+            const res = await fetch(`${VITE_API_URL}/seller/send-otp`, {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify({ email }),
@@ -47,7 +50,7 @@ function ForgotPassword() {
         }
 
         try {
-            const res = await fetch('http://localhost:4000/seller/verify-otp-reset-password', {
+            const res = await fetch(`${VITE_API_URL}/seller/verify-otp-reset-password`, {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify({ email, otp, newPassword }),

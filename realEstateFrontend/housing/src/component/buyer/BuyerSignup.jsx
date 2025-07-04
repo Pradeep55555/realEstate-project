@@ -12,6 +12,8 @@ export default function BuyerSignup({ open, onClose, onSwitchToLogin }) {
   const [password, setPassword] = useState("");
   const [showPassword, setShowPassword] = useState(false); // new state
 
+     const VITE_API_URL= 'https://realestate-project-1-ayx1.onrender.com'
+
   const handleSubmit = async (e) => {
     e.preventDefault();
 
@@ -23,7 +25,8 @@ export default function BuyerSignup({ open, onClose, onSwitchToLogin }) {
     };
 
     try {
-      const res = await fetch("http://localhost:4000/api/buyer/signup", {
+      // const res = await fetch("http://localhost:4000/api/buyer/signup", {
+      const res = await fetch(`${VITE_API_URL}/api/buyer/signup`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

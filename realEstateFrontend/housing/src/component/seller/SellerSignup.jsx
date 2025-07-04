@@ -10,9 +10,13 @@ function SellerSignup() {
   let [mobile, setMobile] = useState('');
   let [email, setEmail] = useState('');
   let [password, setPassword] = useState('');
-  let sellerApiURL = 'http://localhost:4000/api/seller/signup';
+    
+  const VITE_API_URL= 'https://realestate-project-1-ayx1.onrender.com'
+
+  let sellerApiURL = `${VITE_API_URL}/api/seller/signup`;
 
   const navigate = useNavigate();
+
 
   ///////// POST Method For SELLER Ragistration /////////////
 

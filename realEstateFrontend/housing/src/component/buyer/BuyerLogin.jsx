@@ -16,6 +16,9 @@ export default function BuyerLogin({ open, onClose, onSwitchToSignup }) {
   const [password, setPassword] = useState("");
   const [showPassword, setShowPassword] = useState(false);
 
+ const VITE_API_URL= 'https://realestate-project-1-ayx1.onrender.com'
+
+
   const navigate = useNavigate();
 
   //  Normal Login Submit  ***//  buyer fill information 
@@ -25,7 +28,8 @@ export default function BuyerLogin({ open, onClose, onSwitchToSignup }) {
     const payload = { identifier, password };
 
     try {
-      const res = await fetch("http://localhost:4000/api/buyer/login", {
+      // const res = await fetch("http://localhost:4000/api/buyer/login", {
+      const res = await fetch(`${VITE_API_URL}/api/buyer/login`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(payload),
@@ -81,7 +85,7 @@ export default function BuyerLogin({ open, onClose, onSwitchToSignup }) {
         email: user.email,
       };
 
-      const res = await fetch("http://localhost:4000/google-login", {
+      const res = await fetch(`${VITE_API_URL}/google-login`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(payload),
@@ -151,7 +155,7 @@ export default function BuyerLogin({ open, onClose, onSwitchToSignup }) {
         return;
       }
 
-      const res = await fetch("http://localhost:4000/github-login", {
+      const res = await fetch(`${VITE_API_URL}/github-login`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(payload),

@@ -17,6 +17,9 @@ const BuyerForgotPassword = () => {
   const [loading, setLoading] = useState(false);
   const navigate = useNavigate();
 
+   const VITE_API_URL= 'https://realestate-project-1-ayx1.onrender.com'
+
+
   const handleSendOtp = async (e) => {
     e.preventDefault();
     if (!email.trim()) {
@@ -25,7 +28,8 @@ const BuyerForgotPassword = () => {
 
     setLoading(true);
     try {
-      const res = await axios.post("http://localhost:4000/buyer/send-otp", { email });
+      // const res = await axios.post("http://localhost:4000/buyer/send-otp", { email });
+      const res = await axios.post(`${VITE_API_URL}/buyer/send-otp`, { email });
 
       if (res.status === 200) {
         Swal.fire("Success", res.data.message, "success");
@@ -55,7 +59,8 @@ const BuyerForgotPassword = () => {
 
     setLoading(true);
     try {
-      const res = await axios.post("http://localhost:4000/buyer/reset-password", {
+      // const res = await axios.post("http://localhost:4000/buyer/reset-password", {
+      const res = await axios.post(`${VITE_API_URL}/buyer/reset-password`, {
         email,
         otp,
         newPassword,

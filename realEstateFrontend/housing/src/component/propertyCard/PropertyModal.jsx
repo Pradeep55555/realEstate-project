@@ -10,6 +10,8 @@ const PropertyModal = ({ property, visible, onClose, onBuy, onSave, buyerMobile 
 
     const [buyerData, setBuyerData] = useState();
 
+         const VITE_API_URL= 'https://realestate-project-1-ayx1.onrender.com'
+
     // ****** Fetch Buyer Details  *********** */
 
     useEffect(() => {
@@ -17,7 +19,8 @@ const PropertyModal = ({ property, visible, onClose, onBuy, onSave, buyerMobile 
 
         const fetchBuyerInfo = async () => {
             try {
-                const response = await fetch(`http://localhost:4000/api/buyer/${buyerMobile}`);
+                // const response = await fetch(`http://localhost:4000/api/buyer/${buyerMobile}`);
+                const response = await fetch(`${VITE_API_URL}/api/buyer/${buyerMobile}`);
                 if (!response.ok) throw new Error("Failed to fetch buyer");
                 const data = await response.json();
                 setBuyerData(data);
@@ -36,7 +39,8 @@ const PropertyModal = ({ property, visible, onClose, onBuy, onSave, buyerMobile 
         // console.log('buyer info :' , buyerInfo)
 
         try {
-            const response = await fetch("http://localhost:4000/api/buyer/add-interest", {
+            // const response = await fetch("http://localhost:4000/api/buyer/add-interest", {
+            const response = await fetch(`${VITE_API_URL}/api/buyer/add-interest`, {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json"
@@ -107,7 +111,8 @@ const PropertyModal = ({ property, visible, onClose, onBuy, onSave, buyerMobile 
                             key={idx}
                             width={150}
                             height={100}
-                            src={`http://localhost:4000/assets/${photo}`}
+                            // src={`http://localhost:4000/assets/${photo}`}
+                            src={`${VITE_API_URL}/assets/${photo}`}
                             alt={`property-${idx}`}
                             className="scroll-image"
                             preview={false}

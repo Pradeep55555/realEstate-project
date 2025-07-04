@@ -4,6 +4,8 @@ import { useParams, useNavigate } from 'react-router-dom';
 function BuyerPayment() {
   const { property_number } = useParams();
   const navigate = useNavigate();
+  const VITE_API_URL= 'https://realestate-project-1-ayx1.onrender.com'
+
 
   const loadRazorpayScript = () => {
     return new Promise((resolve) => {
@@ -22,7 +24,7 @@ function BuyerPayment() {
       return;
     }
 
-    const data = await fetch("http://localhost:4000/api/payment/order", {
+    const data = await fetch(`${VITE_API_URL}/api/payment/order`, {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ amount: 50000 }) // ₹500.00
@@ -39,7 +41,7 @@ function BuyerPayment() {
       order_id: order.id,
       handler: async function (response) {
         alert("Payment Successful!");
-        await fetch("http://localhost:4000/api/payment/verify", {
+        await fetch(`${VITE_API_URL}/api/payment/verify`, {
           method: "POST",
           headers: { "Content-Type": "application/json" },
           body: JSON.stringify(response)

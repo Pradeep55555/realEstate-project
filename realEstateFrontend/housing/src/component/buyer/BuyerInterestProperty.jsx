@@ -11,6 +11,8 @@ function BuyerInterestProperty({ open, onClose, properties, buyerMobile }) {
     const [messages, setMessages] = useState({});
     const [loadingMap, setLoadingMap] = useState({});
 
+     const VITE_API_URL= 'https://realestate-project-1-ayx1.onrender.com'
+
     const handleInputChange = (propertyNumber, value) => {
         setMessages(prev => ({
             ...prev,
@@ -27,7 +29,8 @@ function BuyerInterestProperty({ open, onClose, properties, buyerMobile }) {
 
         setLoadingMap(prev => ({ ...prev, [property.property_number]: true }));
 
-        fetch(`http://localhost:4000/api/buyer-interest/send-message`, {
+        // fetch(`http://localhost:4000/api/buyer-interest/send-message`, {
+        fetch(`${VITE_API_URL}/api/buyer-interest/send-message`, {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify({

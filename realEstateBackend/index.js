@@ -15,7 +15,15 @@ realEstate.use('/assets', express.static('assets'));
 // CORS setup
 // realEstate.use(cors())
 realEstate.use(cors({
-    origin: ['http://localhost:5173', 'http://localhost:5174', 'http://localhost:5175', 'http://localhost:5176'],
+    origin: [
+        'http://localhost:5173',
+        'http://localhost:5174',
+        'http://localhost:5175',
+        'http://localhost:5176',
+        'https://real-estate-admin-page.vercel.app/',
+        'https://real-estate-seller-page.vercel.app/',
+        'https://real-estate-project-23ku.vercel.app/'
+    ],
     credentials: true
 }));
 

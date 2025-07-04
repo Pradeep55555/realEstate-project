@@ -15,11 +15,14 @@ function PropertyCard() {
     const { buyerInfo } = useAuth();  // buyerInfo = { mobile: '9302840287' }
     const navigate = useNavigate();
 
+     const VITE_API_URL= 'https://realestate-project-1-ayx1.onrender.com'
+
     // *************    get all property details     *******************
 
     async function getPropertyDetails() {
         try {
-            const response = await fetch('http://localhost:4000/api/sellers/all/property/details');
+            // const response = await fetch('http://localhost:4000/api/sellers/all/property/details');
+            const response = await fetch(`${VITE_API_URL}/api/sellers/all/property/details`);
             const finalResult = await response.json();
             setAllProperty(finalResult);
             // console.log('Fetched Data:', finalResult);
@@ -73,7 +76,8 @@ function PropertyCard() {
 
     const buyerSaveProperty = async (property_number) => {
         try {
-            const response = await fetch("http://localhost:4000/api/buyer/save-property", {
+            // const response = await fetch("http://localhost:4000/api/buyer/save-property", {
+            const response = await fetch(`${VITE_API_URL}/api/buyer/save-property`, {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json"

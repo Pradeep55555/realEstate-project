@@ -1,6 +1,7 @@
-.nav-option{
-     font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+.nav-option {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
+
 :root {
     --primary: #1890ff;
     --accent: #06a306;
@@ -207,7 +208,8 @@
     .nav {
         gap: 1vw;
     }
-    .profile{
+
+    .profile {
         height: 1.6rem;
         width: 1.6rem;
         font-size: 1rem;
@@ -231,7 +233,8 @@
         font-size: 0.6rem;
         padding: 0.15rem 0.5rem;
     }
-    .profile{
+
+    .profile {
         height: 1.6rem;
         width: 1.6rem;
         font-size: 1rem;
@@ -268,12 +271,14 @@
 
     .nav.open {
         display: flex;
+        margin-right: 0.8rem;
+        padding-left: 0.5rem;
     }
 
     .nav a {
-        font-size: 1.1rem;
+        font-size: 1rem;
         padding: 0.2rem 2vw;
-        margin: 0.2rem 0;
+        margin: 0.1rem 0;
         width: 100%;
         color: black;
     }
@@ -315,7 +320,8 @@
         margin-right: 0.8rem;
         line-height: 0.5;
     }
-    .login-btn{
+
+    .login-btn {
         padding: 0.2rem 2rem;
     }
 }
