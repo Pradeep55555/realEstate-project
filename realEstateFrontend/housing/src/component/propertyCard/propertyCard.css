@@ -1,0 +1,161 @@
+.card1-container {
+    margin-top: 0px;
+}
+
+.card1-container {
+    padding: 1rem;
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
+.text-div p {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: 1.2rem;
+}
+
+.text-div span {
+    color: #0073e6;
+    font-weight: bold;
+}
+
+/* Horizontal scroll layout */
+.property-row {
+    display: flex;
+    flex-direction: row;
+    overflow-x: auto;
+    gap: 1.5rem;
+    scroll-behavior: smooth;
+    padding-bottom: 1rem;
+}
+
+.property-row::-webkit-scrollbar {
+    height: 2px;
+}
+
+.property-row::-webkit-scrollbar-thumb {
+    background-color: #ccc;
+    border-radius: 4px;
+}
+
+/* Card Design */
+.property-card {
+    width: 280px;
+    min-width: 280px;
+    background-color: #ffffff;
+    border-radius: 16px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.3s ease;
+    flex-shrink: 0;
+}
+
+.property-card:hover {
+    transform: translateY(-5px);
+}
+
+/* Top Image */
+.property-image img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+}
+
+/*  when photo not available */
+
+.no-image-box {
+    width: 100%;
+    height: 180px;
+    background-color: #f0f0f0;
+    color: #777;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-style: italic;
+    font-size: 14px;
+    border: 1px dashed #ccc;
+    text-align: center;
+}
+
+/* Bottom Details */
+.property-details {
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.property-details h3 {
+    font-size: 1.1rem;
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+    color: #333;
+}
+
+.property-details .location {
+    font-size: 0.9rem;
+    color: #666;
+    margin-bottom: 0.5rem;
+}
+
+.property-details .price span {
+    color: #28a745;
+    font-weight: bold;
+}
+
+
+.view-btn {
+    margin-top: 1rem;
+    padding: 0.5rem 1rem;
+    background-color: hsl(0, 0%, 100%);
+    color: #0078DB;
+    border: 1px solid #ddefff;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: 500;
+}
+
+.view-btn:hover {
+    background-color: #147dd3;
+    color: white;
+}
+
+@media screen and (max-width: 480px) {
+    .property-card {
+        width: 200px;
+        min-width: 200px;
+        border-radius: 10px;
+        height: fit-content;
+        padding-bottom: 5px;
+    }
+
+    .property-image img {
+        height: 130px;
+    }
+
+    .no-image-box {
+        height: 130px;
+    }
+
+    .property-details {
+        padding: 0.4rem;
+    }
+
+    .property-details h3 {
+        font-size: 1.2rem;
+        margin-bottom: 0.3rem;
+    }
+
+    .property-details .location {
+        font-size: 0.9rem;
+        margin-bottom: 0.4rem;
+    }
+
+    .view-btn {
+        padding: 0.3rem 0.6rem;
+        margin-top: 0rem;
+    }
+
+}

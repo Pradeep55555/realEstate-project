@@ -1,0 +1,166 @@
+:root {
+  --bg-color: #f0f0f0;
+  --box-color: #ffffff;
+  --text-color: #2c3e50;
+  --input-border: #ccc;
+  --btn-bg: #3498db;
+  --btn-hover: #2980b9;
+}
+
+body.dark-theme {
+  --bg-color: #1e1e1e;
+  --box-color: #2e2e2e;
+  --text-color: #f5f5f5;
+  --input-border: #444;
+  --btn-bg: #444;
+  --btn-hover: #666;
+}
+
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background-color: var(--bg-color);
+}
+
+.admin-login-container {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+.admin-login-box {
+  background: var(--box-color);
+  color: var(--text-color);
+  padding: 40px;
+  border-radius: 12px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  width: 100%;
+  max-width: 400px;
+  position: relative;
+}
+
+.admin-login-box h2 {
+  margin-bottom: 24px;
+  text-align: center;
+}
+
+.top-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 16px;
+}
+
+.back-icon,
+.icon-toggle {
+  cursor: pointer;
+  color: var(--text-color);
+  transition: transform 0.2s;
+}
+
+.back-icon:hover,
+.icon-toggle:hover {
+  transform: scale(1.1);
+}
+
+/* Floating Label */
+.floating-label {
+  position: relative;
+  margin-bottom: 20px;
+}
+
+.floating-label input {
+  width: 100%;
+  padding: 14px 10px 14px 10px;
+  font-size: 15px;
+  border: 1px solid var(--input-border);
+  border-radius: 6px;
+  outline: none;
+  background: transparent;
+  color: var(--text-color);
+}
+
+.floating-label label {
+  position: absolute;
+  top: 14px;
+  left: 12px;
+  font-size: 15px;
+  color: var(--text-color);
+  pointer-events: none;
+  background: var(--box-color);
+  padding: 0 4px;
+  transition: 0.2s ease all;
+}
+
+.floating-label input:focus + label,
+.floating-label input:not(:placeholder-shown) + label {
+  top: -8px;
+  font-size: 12px;
+  color: var(--text-color);
+}
+
+.floating-label input:focus {
+  border-color: var(--btn-bg);
+}
+
+/* Login & Google Buttons */
+.login-button {
+  width: 100%;
+  padding: 12px;
+  background-color: var(--btn-bg);
+  border: none;
+  color: #fff;
+  border-radius: 6px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.login-button:hover {
+  background-color: var(--btn-hover);
+}
+
+.or-divider {
+  text-align: center;
+  margin: 20px 0;
+  font-weight: bold;
+  color: var(--text-color);
+}
+
+.social-button {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 12px;
+  border: 1px solid var(--input-border);
+  border-radius: 6px;
+  font-size: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: transparent;
+  cursor: pointer;
+  color: var(--text-color);
+  transition: background 0.3s;
+}
+
+.social-button:hover {
+  background: rgba(0, 0, 0, 0.05);
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .admin-login-box {
+    padding: 30px 20px;
+  }
+
+  .admin-login-box h2 {
+    font-size: 22px;
+  }
+
+  .login-button, .social-button {
+    font-size: 15px;
+    padding: 10px;
+  }
+}

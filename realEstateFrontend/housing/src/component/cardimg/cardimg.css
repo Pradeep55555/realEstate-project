@@ -1,0 +1,93 @@
+/* 
+.main{
+    margin-top: 70px;
+}
+.main p{
+    text-align: center;
+    font-weight: bold;
+    color: rgba(0, 0, 0, 0.571);
+    padding-top: 30px;
+    padding-bottom: 20px;
+}
+.images{
+    box-sizing: border-box;
+    display: flex;
+    gap: 20px;
+    padding-left: 10px;
+}
+.image{
+    border-radius: 10px;
+    width: 100%;
+}
+.images img{
+    width: 100%;
+}
+.images p{
+    text-align: left;
+    padding: 0;
+} */
+
+
+
+.main {
+  margin-top: 70px;
+  padding: 0 10px;
+}
+
+.main p {
+  text-align: center;
+  font-weight: bold;
+  color: rgba(0, 0, 0, 0.571);
+  padding-top: 30px;
+  padding-bottom: 20px;
+  font-size: 1.2rem;
+}
+
+/* Scrollable Image Container */
+.images-scroll {
+  display: flex;
+  gap: 20px;
+  overflow-x: auto;
+  scrollbar-width: none; 
+}
+
+.images-scroll::-webkit-scrollbar {
+  display: none; 
+}
+
+.image {
+  flex: 0 0 auto;
+  width: 200px;
+  border-radius: 10px;
+  text-align: center;
+}
+
+.image img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+.image p {
+  text-align: center;
+  font-size: 0.95rem;
+  margin-top: 0px;
+}
+
+/* Optional: Improve mobile spacing */
+@media (max-width: 480px) {
+  .main{
+    margin-top: 100px;
+  }
+  .main p {
+    font-size: 1rem;
+  }
+
+  .image {
+    width: 140px;
+  }
+
+  .image p {
+    font-size: 0.9rem;
+  }
+}

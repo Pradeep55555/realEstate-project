@@ -1,0 +1,157 @@
+* {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+.signup-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+
+     background-image: url('navbar-img1.jpg');
+  background-repeat:round;
+  background-size: cover;
+}
+
+.signup-box {
+    background-color: white;
+    padding: 40px 30px;
+    padding-top: 8px;
+    padding-right: 8px;
+    border-radius: 10px;
+    max-width: 400px;
+    width: 350px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.6);
+}
+
+.seller-signup-page-close {
+    float: right;
+    font-size: 16px;
+    cursor: pointer;
+    border: solid 1px grey;
+    background-color: rgb(252, 251, 251);
+    border-radius: 3px;
+    padding: 0px 5px;
+    padding-bottom: 1.5px;
+}
+
+.seller-signup-page-close:hover {
+    background-color: rgb(245, 94, 94);
+    color: white;
+    border: solid 1px red;
+}
+
+.align {
+    padding-top: 32px;
+    padding-right: 22px;
+}
+
+.signup-box h2 {
+    text-align: center;
+    margin-bottom: 25px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.signup-box label {
+    display: block;
+    margin-top: 15px;
+    font-weight: bold;
+}
+
+.signup-box input[type="text"],
+.signup-box input[type="email"],
+.signup-box input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-radius: 2px;
+}
+
+.show-password {
+    margin-top: 10px;
+}
+
+.show-password span {
+    margin-left: 5px;
+}
+
+.signup-box button {
+    width: 100%;
+    padding: 10px;
+    margin-top: 20px;
+    background-color: #00779c;
+    border: none;
+    border-radius: 3px;
+    color: white;
+    font-weight: bold;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.signup-box button:hover {
+    background-color: #005e7a;
+}
+
+.links {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 14px;
+}
+
+.links a {
+    color: #00779c;
+    text-decoration: none;
+}
+
+.links a:hover {
+    text-decoration: underline;
+}
+
+
+/* this is floating lable designing  */
+/* 
+.input-container {
+  position: relative;
+  margin-bottom: 1.5rem;
+}
+
+.input {
+  width: 100%;
+  border: 1px solid #000000;
+  border-radius: 4px;
+  background: none;
+  font-size: 1rem;
+}
+
+.user-Label {
+  position: absolute;
+  left: 10px;
+  top: 0px;
+  color: #9e9e9e;
+  pointer-events: none;
+  transition: 0.3s ease all;
+  background-color: white;
+  padding: 0 0.3em;
+}
+
+.input:focus,
+.input:valid {
+  outline: none;
+}
+
+.input:focus + .user-Label,
+.input:valid + .user-Label {
+  top: -18px;
+  left: 8px;
+  font-size: 0.75rem;
+  color: #1a73e8;
+} */

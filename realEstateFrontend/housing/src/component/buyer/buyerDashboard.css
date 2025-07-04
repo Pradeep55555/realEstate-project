@@ -1,0 +1,140 @@
+/* BuyerDashboard.css */
+.buyer-dashboard {
+  padding: 20px;
+  background-color: #f0f2f5;
+}
+
+.dashboard-header {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-bottom: 24px;
+}
+
+@media(min-width: 768px) {
+  .dashboard-header {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+
+.stats-row,
+.info-row {
+  margin-bottom: 24px;
+}
+
+.stat-card {
+  border-radius: 10px;
+  color: white;
+  text-align: center;
+  padding: 7px 10px !important;   
+  min-height: auto;               
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 4px;
+}
+
+.stat-card .ant-typography {
+  margin-bottom: 5px !important;    
+  line-height: 1;             
+}
+
+.stat-card .label {
+  font-size: 18px;               
+  margin-bottom: 0;
+  line-height: 1;
+}
+.stat-card .ant-card-body {
+  padding: 0 !important;       
+}
+
+.stat-card.red {
+  background-color: #ff4d4f;
+}
+
+.stat-card.blue {
+  background-color: #1890ff;
+}
+
+.stat-card.green {
+  background-color: #52c41a;
+}
+
+.stat-card.yellow {
+  background-color: #faad14;
+  color: black;
+}
+
+.stats-list {
+  padding-left: 20px;
+  margin: 0;
+  list-style-type: disc;
+}
+
+.stats-list li {
+  margin-bottom: 6px;
+  font-size: 14px;
+}
+
+
+/*   For modal css  */
+
+.profile-container {
+  position: relative;
+}
+
+
+.buyer-modal-content p {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin: 12px 0;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.buyer-profile-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.buyer-profile-image {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 5px;
+}
+
+.buyer-modal-actions {
+  display: flex;
+  align-items: center;
+  gap: 50px;
+  margin-top: 12px; 
+}
+
+.buyer-modal-edit-icon {
+  cursor: pointer;
+  font-size: 20px;
+  color: #1677ff;
+  transition: color 0.2s;
+}
+
+.buyer-modal-edit-icon:hover {
+  color: #0958d9;
+}
+
+.buyer-modal-logout-icon {
+  cursor: pointer;
+  font-size: 20px;
+  color: red;
+  transition: color 0.2s;
+}
+
+.buyer-modal-logout-icon:hover {
+  color: darkred;
+}

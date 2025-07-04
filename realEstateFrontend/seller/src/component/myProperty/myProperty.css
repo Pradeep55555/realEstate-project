@@ -1,0 +1,84 @@
+
+.myProperty-container {
+  padding: 16px;
+}
+
+.property-header {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 16px;
+}
+
+.property-header .add-btn {
+  padding: 6px 12px;
+  background-color: #1677ff;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.property-header .add-btn:hover {
+  background-color: #0958d9;
+}
+
+.property-header .search-container {
+  position: relative;
+  flex-grow: 1;
+  max-width: 300px;
+}
+
+.property-header .search-input {
+  width: 100%;
+  padding: 6px 32px 6px 10px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+}
+
+.property-header .search-icon {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #888;
+  pointer-events: none;
+}
+
+.property-header .pagination-selector {
+  padding: 4px 10px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+}
+
+@media (max-width: 768px) {
+  .property-header {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .property-header .search-container,
+  .property-header .pagination-selector {
+    max-width: 100%;
+  }
+
+  .property-header .add-btn {
+    width: 100%;
+  }
+}
+
+/* Table photo column */
+.ant-table .photo-column {
+  padding: 4px 6px !important;
+}
+
+.photo-column img {
+  display: inline-block;
+  margin: 0px 2px;
+  border-radius: 4px;
+}
+

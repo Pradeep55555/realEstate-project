@@ -1,0 +1,119 @@
+.login-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.form-group {
+  position: relative;
+  display: flex;
+  flex-direction: column-reverse;
+}
+
+.form-group input {
+  padding: 10px 10px 10px 10px;
+  font-size: 14px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  outline: none;
+}
+
+.form-group label {
+  position: absolute;
+  top: 12px;
+  left: 12px;
+  background: white;
+  padding: 0 4px;
+  color: #999;
+  font-size: 14px;
+  transition: 0.2s ease;
+  pointer-events: none;
+}
+
+.form-group input:focus+label,
+.form-group input:not(:placeholder-shown)+label {
+  top: -8px;
+  left: 10px;
+  font-size: 12px;
+  color: #1890ff;
+}
+
+.login-seller-btn {
+  background-color: #1890ff;
+  color: white;
+  border: none;
+  padding: 5px 16px;
+  cursor: pointer;
+  border-radius: 4px;
+  margin-top: 10px;
+  font-weight: bold;
+  width: 100%;
+}
+
+
+.switch-text {
+  text-align: center;
+  margin-top: 10px;
+  font-size: 0.9rem;
+}
+
+.switch-text a {
+  color: #1890ff;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.show-password-toggle {
+  display: flex;
+  align-items: center;
+  margin-bottom: 12px;
+  font-size: 0.85rem;
+  user-select: none;
+}
+
+.show-password-toggle input[type="checkbox"] {
+  margin-right: 6px;
+  cursor: pointer;
+}
+
+.show-password-toggle label {
+  cursor: pointer;
+  color: #1890ff;
+}
+.buyer-forgot-password{
+  color: #1890ff;
+  line-height: 0;
+  padding-top: 14px;
+  padding-left: 70px;
+  cursor: pointer;
+}
+
+/* google-login-btn  */
+
+.google-login-btn {
+  background-color:#fff;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  padding: 5px;
+  width: "100%";
+  margin: 10px 0 0 0 ;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  cursor: pointer;
+}
+
+/* social-login-btn    */
+
+.social-login-btn-div{
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin: 5px 0 0 0;
+
+}
+.social-login-btn{
+  cursor:pointer;
+  opacity: 0.8;
+}

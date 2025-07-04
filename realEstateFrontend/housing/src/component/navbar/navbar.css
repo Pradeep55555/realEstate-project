@@ -1,0 +1,319 @@
+.nav-option{
+     font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+:root {
+    --primary: #1890ff;
+    --accent: #06a306;
+    --header-bg: rgba(0, 0, 0, 0);
+    --white: #fff;
+    --nav-link: rgba(255, 255, 255, 0.85);
+    --nav-link-hover: #fff;
+    --modal-bg: #f9f9f9;
+}
+
+.container {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    position: relative;
+}
+
+.bg-img {
+    min-height: 50vh;
+    background-image: url('navbar-img1.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2vw;
+    background: var(--header-bg);
+    border-radius: 0 0 16px 16px;
+    position: relative;
+}
+
+
+.nav {
+    display: flex;
+    gap: 2vw;
+    align-items: center;
+}
+
+.nav a {
+    text-decoration: none;
+    color: var(--nav-link);
+    font-size: 1rem;
+    font-weight: 500;
+    padding: 0.5rem 0.7rem;
+    border-radius: 4px;
+    transition: background 0.2s, color 0.2s;
+}
+
+.nav a:hover,
+.nav a:focus {
+    background: var(--primary);
+    color: var(--nav-link-hover);
+    /* padding: 0.35rem 0.6rem; */
+}
+
+.header-actions {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.post-property {
+    background-color: var(--white);
+    padding: 0.3rem 1.2rem;
+    border-radius: 6px;
+    font-weight: bold;
+    font-size: 1rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.07);
+    transition: background 0.2s;
+}
+
+.post-property:hover {
+    background: #f0f0f0;
+}
+
+.post-property button {
+    background-color: var(--accent);
+    border: none;
+    border-radius: 3px;
+    color: var(--white);
+    font-size: 0.8rem;
+    font-weight: bold;
+    margin-left: 0.5rem;
+    padding: 0.2rem 0.7rem;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.post-property button:hover {
+    background: #048104;
+}
+
+.profile {
+    background-color: var(--white);
+    height: 2.1rem;
+    width: 2.1rem;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    font-size: 1.2rem;
+    transition: background 0.2s, box-shadow 0.2s;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.08);
+}
+
+.profile:hover {
+    background: #e6f7ff;
+}
+
+.buyer-name {
+    color: var(--white);
+    margin-right: 0.5rem;
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: 500;
+    transition: color 0.2s;
+}
+
+.buyer-name:hover {
+    color: var(--primary);
+}
+
+
+
+.mobile-menu-btn {
+    display: none;
+    background: none;
+    border: none;
+    color: var(--white);
+    font-size: 2rem;
+    cursor: pointer;
+    margin-left: 0.5rem;
+    transition: color 0.2s;
+}
+
+.mobile-menu-btn:hover {
+    color: var(--primary);
+}
+
+.profile-container {
+    position: relative;
+}
+
+
+
+.login-btn {
+    background-color: var(--primary);
+    color: var(--white);
+    border: none;
+    padding: 0.3rem 2rem;
+    cursor: pointer;
+    border-radius: 4px;
+    display: block;
+    margin: 0 auto 10px auto;
+    font-size: 1rem;
+    font-weight: 500;
+    transition: background 0.2s;
+}
+
+.login-btn:hover {
+    background: #40a9ff;
+}
+
+.signup-text {
+    text-align: center;
+    font-size: 0.95rem;
+    margin-bottom: 1rem;
+}
+
+.signup-text a {
+    color: var(--primary);
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.signup-text a:hover {
+    color: #40a9ff;
+}
+
+
+@media (max-width: 1124px) {
+    .nav a {
+        font-size: 0.8rem;
+    }
+
+    .post-property {
+        font-size: 0.7rem;
+        padding: 0.2rem 0.6rem;
+    }
+
+    .post-property button {
+        font-size: 0.6rem;
+        margin-left: 0.1rem;
+        padding: 0.1rem 0.4rem;
+    }
+
+    .nav {
+        gap: 1vw;
+    }
+    .profile{
+        height: 1.6rem;
+        width: 1.6rem;
+        font-size: 1rem;
+    }
+
+
+}
+
+@media (max-width: 1024px) {
+    .header {
+        flex-wrap: wrap;
+        padding: 1rem 1vw;
+    }
+
+
+    .nav a {
+        font-size: 0.7rem;
+    }
+
+    .post-property {
+        font-size: 0.6rem;
+        padding: 0.15rem 0.5rem;
+    }
+    .profile{
+        height: 1.6rem;
+        width: 1.6rem;
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .header {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 1rem 2vw;
+    }
+
+
+    .header-actions {
+        width: 100%;
+        justify-content: flex-end;
+        gap: 0.7rem;
+    }
+
+    .nav {
+        display: none;
+        flex-direction: column;
+        width: fit-content;
+        background-color: #ffffff;
+        position: absolute;
+        top: 100%;
+        right: 0;
+        z-index: 100;
+        padding: 1rem 0;
+        border-radius: 5px;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 1);
+    }
+
+    .nav.open {
+        display: flex;
+    }
+
+    .nav a {
+        font-size: 1.1rem;
+        padding: 0.2rem 2vw;
+        margin: 0.2rem 0;
+        width: 100%;
+        color: black;
+    }
+
+    .profile {
+        height: 1.6rem;
+        width: 1.6rem;
+        font-size: 1rem;
+    }
+
+    .mobile-menu-btn {
+        display: block;
+        font-size: 1.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .header {
+        padding: 0.7rem 1vw;
+    }
+
+    .post-property {
+        font-size: 0.8rem;
+        padding: 0.2rem 0.7rem;
+    }
+
+    .buyer-name {
+        font-size: 0.9rem;
+    }
+
+    .profile {
+        height: 1.6rem;
+        width: 1.6rem;
+        font-size: 1rem;
+    }
+
+    .mobile-menu-btn {
+        font-size: 1.5rem;
+    }
+    .login-btn{
+        padding: 0.2rem 2rem;
+    }
+}

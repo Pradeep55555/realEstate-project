@@ -1,0 +1,58 @@
+.inquiry-container {
+  display: flex;
+  padding: 20px;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.property-list {
+  flex: 1;
+  max-width: 200px;
+}
+
+.buyers-table {
+  flex: 3;
+  min-width: 300px;
+}
+
+
+/* scroll property button  */
+.scroll-buttons {
+  display: flex;
+  overflow-x: auto;
+  gap: 8px;
+  padding-bottom: 8px;
+  scrollbar-width: thin;
+}
+
+.notification-dot {
+  position: absolute;
+  top: -5px;
+  right: -18px;
+  min-width: 15px;
+  height: 15px;
+  background-color: #25D366;
+  /* background-color: red; */
+  border-radius: 50%;
+  color: white;
+  font-size: 10px;
+  font-weight: bold;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 4px;
+}
+
+.notification-dot::after {
+  content: attr(data-count);
+}
+
+.notification-dot.large {
+  font-size: 8px; 
+}
+.plus-sign {
+  font-size:8px;
+  position: absolute;
+  top: 3px;
+  right: 0px;
+}
