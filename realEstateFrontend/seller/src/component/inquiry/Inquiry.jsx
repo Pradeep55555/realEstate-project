@@ -5,7 +5,7 @@
 import React, { useEffect, useState, useRef } from 'react';
 import { Row, Col, Button, Card, Table, Input, message, Tooltip, Space } from 'antd';
 import { CommentOutlined, EyeInvisibleOutlined } from '@ant-design/icons';
-import './Inquiry.css';
+import './inquiry.css';
 
 const Inquiry = ({ seller_mobile }) => {
   const [allInquiries, setAllInquiries] = useState([]);
