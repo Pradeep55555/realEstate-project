@@ -9,7 +9,7 @@ import {
   PhoneOutlined,
   EnvironmentOutlined,
 } from '@ant-design/icons';
-import './Footer.css';
+import './footer.css';
 
 const { Title, Text } = Typography;
 
